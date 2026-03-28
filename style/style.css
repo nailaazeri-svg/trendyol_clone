@@ -1,0 +1,204 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+header{
+    background-color: #fb4500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 10px;
+}
+
+header .logo{
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+header form{
+    width: 100%;
+    max-width: 400px;
+}
+
+header form input{
+    padding: 6px;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+}
+
+header form i{
+    margin-left: -32px;
+    cursor: pointer;
+    color: orangered;
+}
+
+header nav li:not(:last-child){
+    border-right: 1px solid white;
+    padding-right: 20px;
+}
+header nav{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+header nav .basket{
+    border: none;
+    position: relative;
+}
+
+header nav .basket a .basket-count{
+    background-color: blue;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+header nav .basket a{
+    font-size: 24px;
+}
+
+header nav li a{
+    color: white;
+}
+
+.categories{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 5px;
+    border-bottom: 1px solid gray;
+}
+
+.categories li{
+    padding: 3px;
+    margin: 5px 0;
+}
+
+.categories li a{
+    color: gray;
+    font-weight: bold;
+    font-size: 15px;
+    padding-bottom: 5px;
+}
+
+.categories li a:hover{
+    border-bottom: 2px solid orangered;
+}
+
+.products{
+    padding: 20px 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px , 1fr));
+    gap: 15px;
+}
+
+.products .product-card {
+    border: 1px solid #eee;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.products .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.products .product-card .product-banner{
+    background-color: orangered;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.products .product-card .product-content{
+    padding: 15px;
+}
+
+.products .product-card .product-content .product-title{
+    font-size: 15px;
+    color: gray;
+    display: flex;
+    gap: 5px;
+    margin: 10px 0;
+}
+
+.products .product-card .product-content .product-title span{
+    font-weight: bold;
+    color: black;
+}
+
+.products .product-card .product-image {
+    height: 200px;
+    width: 100%;
+}
+
+.products .product-card .product-image img{
+     width: 100%;
+    height: 100%;
+    object-fit: cover
+    transition: transform 0.3s ease;
+}
+
+.products .product-card:hover img{
+    transform: scale(1.05);
+}
+
+.products .product-card .product-content .product-stars i{
+    color: gold;
+}
+
+.products .product-card .product-content .product-price{
+    color: orangered;
+    font-weight: bold;
+    margin: 15px 0;
+    font-size: 20px;
+}
+
+.products .product-card .product-content .add-to-cart{
+     border: 1px solid orangered;
+     width: 100%;
+     text-align: center;
+     padding: 10px;
+     background-color: white;
+     font-weight: bold;
+     font-size: 15px;
+     cursor: pointer;
+     transition: all .3s ease;
+}
+
+.products .product-card .product-content .add-to-cart:hover{
+    background-color: orangered;
+    color: white;
+}
+
+@media (max-width: 900px) {
+    nav li {
+        display: none;
+    }
+
+    header form{
+        margin-left: auto;
+    }
+}
